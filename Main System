@@ -1,12 +1,9 @@
-local Staff = {"User here"}
 local GUI = script.parent
 
-Game.players.playeradded:connect(function(player)
-  if player == Staff then
-    GUI.enabled = true
-    wait(5)
-    GUI.enabled = false
-    else
- 
-  end
+if Game.players.localplayer.name == "User" then
+  GUI.enabled = true
+  wait(5)
+  GUI.enabled = false
+  else
+  GUI.enabled = false
 end)
